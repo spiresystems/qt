@@ -44,7 +44,7 @@
 
 #include <stddef.h>
 
-#define QT_VERSION_STR   "4.8.6"
+#define QT_VERSION_STR   "4.8.6r1"
 /*
    QT_VERSION is (major << 16) + (minor << 8) + patch.
 */
