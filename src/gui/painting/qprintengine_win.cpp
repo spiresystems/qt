@@ -1388,7 +1388,10 @@ QVariant QWin32PrintEngine::property(PrintEnginePropertyKey key) const
     switch (key) {
 
     case PPK_CollateCopies:
-        value = false;
+        if(d->devMode)
+            value = d->devMode->dmCollate == DMCOLLATE_TRUE;
+        else
+            value = false;
         break;
 
     case PPK_ColorMode:
