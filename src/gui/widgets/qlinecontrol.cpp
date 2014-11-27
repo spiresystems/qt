@@ -697,8 +697,6 @@ void QLineControl::internalSetText(const QString &txt, int pos, bool edited)
     } else {
         m_text = txt.isEmpty() ? txt : txt.left(m_maxLength);
     }
-    m_history.clear();
-    m_modifiedState =  m_undoState = 0;
     m_cursor = (pos < 0 || pos > m_text.length()) ? m_text.length() : pos;
     m_textDirty = (oldText != m_text);
     bool changed = finishChange(-1, true, edited);

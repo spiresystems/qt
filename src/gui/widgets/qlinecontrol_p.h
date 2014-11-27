@@ -210,7 +210,7 @@ public:
         QString res = m_maskData ? stripString(m_text) : m_text;
         return (res.isNull() ? QString::fromLatin1("") : res);
     }
-    void setText(const QString &txt) { internalSetText(txt, -1, false); }
+    void setText(const QString &txt) { internalSetText(txt, -1, false); m_history.clear(); m_modifiedState = m_undoState = 0; }
     QString displayText() const { return m_textLayout.text(); }
 
     void backspace();
